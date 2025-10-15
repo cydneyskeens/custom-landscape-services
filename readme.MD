@@ -1,7 +1,5 @@
 # Static Website
 
-This is a minimal static site modeled after a Squarespace-style homepage. It includes a hero, gallery, services/pricing, and a contact form.
-
 ## How to use
 
 1. Create a new GitHub repository (public or private).
