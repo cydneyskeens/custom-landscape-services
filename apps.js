@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const galleryContainer = document.getElementById('gallery');
 
 // replace this with your GitHub Pages base URL:
-const baseURL = "https://<cydneyskeens>.github.io/<custom-landscape-services>/images/gallery/";
+const baseURL = "https://cydneyskeens.github.io/custom-landscape-services/images/gallery/";
 
 // list your images here — everything you upload to images/gallery/
   const imageList = [
