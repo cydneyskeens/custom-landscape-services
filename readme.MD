@@ -1,4 +1,4 @@
-# Grape Harp — Static Website
+# Static Website
 
 This is a minimal static site modeled after a Squarespace-style homepage. It includes a hero, gallery, services/pricing, and a contact form.
 
