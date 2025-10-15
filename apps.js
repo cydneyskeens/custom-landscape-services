@@ -15,47 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  <script>
-const galleryContainer = document.getElementById('gallery');
-
-// replace this with your GitHub Pages base URL:
-const baseURL = "https://cydney-skeens.github.io/custom-landscape-services/images/gallery/";
-
-// list your images here — everything you upload to images/gallery/
-  const imageList = [
-  "campsite.jpeg",
-  "campsite2.jpeg",
-  "campsite3.jpeg",
-  "campsite4.jpeg",
-  "campsiteUSA.jpeg",
-  "cydtractor.jpeg",
-  "equipment.jpeg",
-  "fencesunset.jpeg",
-  "fencetractor.jpeg",
-  "mulch.jpeg",
-  "nursery.jpeg",
-  "orchard.jpeg",
-  "solar.jpeg",
-  "tinyhousesnow.jpeg",
-  "tractor2.jpeg",
-  "treedamage.jpeg",
-  "treeplanting.jpeg",
-  "treerow.jpeg",
-  "treerow2.jpeg",
-  "treetransplant.jpeg",
-  "treetransplant1.jpeg",
-  "treetransplant2.jpeg",
-  "vermeer.jpeg"
-  // add more filenames here
-];
-
-imageList.forEach(filename => {
-  const img = document.createElement("img");
-  img.src = baseURL + filename;
-  img.alt = filename;
-  galleryContainer.appendChild(img);
-});
-</script>
 
   // contact form: fake submit (you can wire this to Netlify Forms / Formspree / server)
   const form = document.getElementById('contact-form');
