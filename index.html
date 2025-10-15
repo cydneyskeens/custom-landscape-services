@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grape Harp — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Grape Harp — modern minimal hero, gallery, about and contact."/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Grape Harp</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+      <button class="mobile-nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Modern spaces. Thoughtful design.</h1>
+          <p class="lead">We craft clean, livable landscape and exterior spaces that suit how you live. Local — dependable — creative.</p>
+          <p>
+            <a href="#contact" class="btn btn-primary">Get a Quote</a>
+            <a href="#gallery" class="btn btn-outline">See Portfolio</a>
+          </p>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <!-- Replace with your own image or set via CSS -->
+          <div class="photo-placeholder">PHOTO</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Intro -->
+    <section class="section section--light" id="about">
+      <div class="container">
+        <h2>About Grape Harp</h2>
+        <p class="muted">Custom Landscape Services — creative, on-time, and friendly. We work with homeowners and businesses to design and build outdoor environments that last.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Design</h3>
+            <p>Concept sketches, material selection, planting plans and site layout.</p>
+          </article>
+          <article class="card">
+            <h3>Build</h3>
+            <p>Hardscape, irrigation, planting and lighting delivered by our team.</p>
+          </article>
+          <article class="card">
+            <h3>Maintain</h3>
+            <p>Seasonal maintenance and care so your space stays great for years.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <p class="muted">A selection of recent projects.</p>
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Add <figure> image blocks here or let JS render placeholders -->
+          <figure class="thumb"><img src="https://picsum.photos/800/600?random=1" alt="Project 1"><figcaption>Project 1</figcaption></figure>
+          <figure class="thumb"><img src="https://picsum.photos/800/600?random=2" alt="Project 2"><figcaption>Project 2</figcaption></figure>
+          <figure class="thumb"><img src="https://picsum.photos/800/600?random=3" alt="Project 3"><figcaption>Project 3</figcaption></figure>
+          <figure class="thumb"><img src="https://picsum.photos/800/600?random=4" alt="Project 4"><figcaption>Project 4</figcaption></figure>
+          <figure class="thumb"><img src="https://picsum.photos/800/600?random=5" alt="Project 5"><figcaption>Project 5</figcaption></figure>
+          <figure class="thumb"><img src="https://picsum.photos/800/600?random=6" alt="Project 6"><figcaption>Project 6</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Pricing (simple) -->
+    <section class="section section--light" id="services">
+      <div class="container narrow">
+        <h2>Pricing & FAQ</h2>
+        <p>Common packages — contact us for a custom estimate.</p>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <h3>Consultation</h3>
+            <p class="price">$120</p>
+            <p class="small">1-hour site visit & initial recommendations</p>
+          </div>
+          <div class="price-card">
+            <h3>Design Package</h3>
+            <p class="price">$1,200</p>
+            <p class="small">Concepts, plan, materials list</p>
+          </div>
+          <div class="price-card">
+            <h3>Full Build</h3>
+            <p class="price">Varies</p>
+            <p class="small">Site-dependent; we provide an estimate after consultation</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2>Contact</h2>
+          <p>For estimates and appointments:</p>
+          <ul class="contact-info">
+            <li><strong>Email:</strong> cydneyskeens@gmail.com</li>
+            <li><strong>Phone:</strong> (555) 123-4567</li>
+            <li><strong>Location:</strong> Local service area</li>
+          </ul>
+          <p class="muted">Prefer email? Use the contact form on GitHub Pages or link to your own contact provider.</p>
+        </div>
+
+        <form id="contact-form" class="contact-form" aria-label="Contact form">
+          <label>
+            Name
+            <input name="name" type="text" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Grape Harp — Custom Landscape Services</p>
+        <nav class="footer-nav">
+          <a href="#privacy">Privacy</a>
+          <a href="#terms">Terms</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
