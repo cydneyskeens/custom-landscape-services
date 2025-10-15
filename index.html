@@ -68,23 +68,25 @@ implements to fulfill most landscape needs from mowing to plowing and planting, 
       </div>
     </section>
 
-    <!-- Gallery -->
-  <section class="section" id="gallery">
+   <!-- Gallery -->
+<section class="section" id="gallery">
   <div class="container">
     <h2>Gallery</h2>
     <p class="muted">Recent projects</p>
     <div class="gallery-grid" id="gallery-grid">
+      <!-- Images will load here automatically -->
+    </div>
+  </div>
+</section>
 
-
-
-  <script>
-const galleryContainer = document.getElementById('gallery');
+<script>
+const galleryContainer = document.getElementById('gallery-grid');
 
 // replace this with your GitHub Pages base URL:
-const baseURL = "https://cydney-skeens.github.io/custom-landscape-services/images/gallery/";
+const baseURL = "https://cydneyskeens.github.io/custom-landscape-services/images/gallery/";
 
 // list your images here — everything you upload to images/gallery/
-  const imageList = [
+const imageList = [
   "campsite.jpeg",
   "campsite2.jpeg",
   "campsite3.jpeg",
@@ -108,7 +110,6 @@ const baseURL = "https://cydney-skeens.github.io/custom-landscape-services/image
   "treetransplant1.jpeg",
   "treetransplant2.jpeg",
   "vermeer.jpeg"
-  // add more filenames here
 ];
 
 imageList.forEach(filename => {
@@ -117,15 +118,9 @@ imageList.forEach(filename => {
   img.alt = filename;
   galleryContainer.appendChild(img);
 });
-</script>
-
-
-
-      
-      <!-- Images will load here automatically -->
-    </div>
-  </div>
-</section>
+</script> 
+    
+    
 
     <!-- Services  -->
     <section class="section section--light" id="services">
