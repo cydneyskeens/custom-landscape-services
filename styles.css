@@ -102,42 +102,25 @@ button:hover, .btn:hover {
 }
 
 /* === Gallery === */
-
-
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* ✅ exactly 3 per row */
-  gap: 15px;
-  margin-top: 1rem;
-  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive rows */
+  gap: 16px;
+  margin-top: 20px;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
+  height: 250px;              /* sets uniform height */
+  object-fit: cover;          /* crops neatly without stretching */
+  border-radius: 8px;         /* smooth corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.05);
-}
-
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.gallery img {
-  width: 250px;
-  height: auto;
-  border-radius: 6px;
-  object-fit: cover;
+  transform: scale(1.03);      /* gentle zoom */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 /* === Footer === */
