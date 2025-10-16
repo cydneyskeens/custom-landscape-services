@@ -88,6 +88,14 @@ body{
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* optional: subtle shadow */
 }
 
+.hero-image {
+  text-align: center; /* keeps it centered */
+  padding: 20px;
+}
+
+.hero-photo {
+  max-width: 600px; /* smaller hero image */
+}
 
 .photo-placeholder{
   height:360px;
