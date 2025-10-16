@@ -1,75 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Custom Landscape Services — Home</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Custom Landscape Services — modern minimal hero, gallery, about and contact."/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Landscape Services</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">Custom Landscape Services</a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#services">Services</a>
-        <a href="#contact" class="cta">Contact</a>
-      </nav>
-      <button class="mobile-nav-toggle" aria-label="Open menu">☰</button>
+  <!-- === HERO SECTION === -->
+  <section class="hero">
+    <h1>"I TOOK A WALK IN THE WOODS AND CAME OUT TALLER" – HENRY DAVID THOREAU</h1>
+    <img src="images/tractor2.jpeg" alt="Tractor in field">
+    <p style="max-width:700px;margin:20px auto 0;font-size:0.9rem;line-height:1.4;">
+      Landscaping firm specializing in afforestation, tree transplanting, and native grassland preservation. 
+      Offering landscaping services and horticultural consultations.
+    </p>
+  </section>
+
+  <!-- === OUR FLEET SECTION === -->
+  <section id="fleet">
+    <h2 class="section-title">Our Fleet</h2>
+    <div class="section-content">
+      <p>
+        Equipment to tackle most landscaping, maintenance, and dirt work. Highlights of our fleet include:
+      </p>
+      <ul>
+        <li>Big John tree spade truck capable of transplanting trees up to 8' diameter</li>
+        <li>Tight access Vermeer tree spade</li>
+        <li>Implements to fulfill most landscape needs from mowing to plowing and planting</li>
+        <li>Specialized hose track planer, road grader, and snow plow</li>
+      </ul>
     </div>
-  </header>
+    <img src="images/fleet.jpeg" alt="Our Fleet" style="width:100%;border-radius:6px;">
+  </section>
 
+  <!-- === THE FARM SECTION === -->
+  <section id="farm">
+    <h2 class="section-title">The Farm</h2>
+    <div class="section-content">
+      <p>
+        We operate a tree farm in Northeast Arkansas where we plant and nurture native seedlings. Trees include 
+        bald cypress, various species of pine, hardwood trees, nut trees including pecan and black walnut, and 
+        many species of oak and ornamentals like dogwood and cedar. We also have a small fruit orchard with 
+        many varieties of apple, plum, peach, and fig.
+      </p>
+      <a href="#" class="btn">Learn more</a>
+    </div>
+    <img src="images/farm.jpeg" alt="Farm field" style="width:100%;border-radius:6px;">
+  </section>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>Custom Landscape Services</h1>
-          <p class="lead">"I took a walk in the woods and came out taller"  -Henry David Thoreau</p>
-          <p>
-            <a href="#contact" class="btn btn-primary">Get a Quote</a>
-            <a href="#gallery" class="btn btn-outline">See Portfolio</a>
-          </p>
-        </div>
-        <div class="hero-image" aria-hidden="true">
-  <img src="https://cydneyskeens.github.io/custom-landscape-services/images/gallery/tractor2.jpeg" 
-       alt="Tractor photo" class="hero-photo">
-</div>
-      </div>
-    </section>
-  </main>
-
-    <!-- About / Intro -->
-    <section class="section section--light" id="about">
-      <div class="container">
-        <h2>About Custom Landscape Services</h2>
-        <p class="muted">Custom Landscape Services  </p>
-        <div class="cards">
-          <article class="card">
-            <h3>Services</h3>
-            <p>Landscaping firm specializing in reforestation, tree transplanting, native grassland preservation. Our services range from landscaping and horticultural consultations, concept sketches, material selection / sourcing, planting plans and site layout all the way to install.</p>
-          </article>
-          <article class="card">
-            <h3>Our Fleet</h3>
-            <p>Equipment to tackle most landscaping, maintenance and dirt work. Highlights of our fleet including:
-
-Big John tree spade truck capable of transplanting trees up to 8" diameter 
-
-tight access Vermeer tree spade 
-
-implements to fulfill most landscape needs from mowing to plowing and planting, specialized horse track planer, road grader and snow plow</p>
-          </article>
-          <article class="card">
-            <h3>The Farm</h3>
-            <p>We operate a tree farm in North East Arkansas where we plant and nurture native seedlings. Trees include baldcypress, various species of pine, hardwood trees, nut trees including pecan and black walnut, many species of oak, and ornamental trees like dogwood and redbud. We also have a small fruit orchard with many varietals of apple, plum, peach, and fig. </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
+  <!-- === PROJECT GALLERY === -->
+  
    <!-- Gallery -->
 <section class="section" id="gallery">
   <div class="container">
@@ -121,56 +103,11 @@ imageList.forEach(filename => {
 </script>    
     
 
-    <!-- Services  -->
-    <section class="section section--light" id="services">
-      <div class="container narrow">
-        </div>
-    </section>
 
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <h2>Contact</h2>
-          <p>For estimates and appointments:</p>
-          <ul class="contact-info">
-            <li><strong>Email:</strong> cydneyskeens@gmail.com</li>
-            <li><strong>Phone:</strong> (214) 763-0146</li>
-            <li><strong>Location:</strong> US HWY 160 Koshkonong, Missouri </li>
-          </ul>
-          <p class="muted">Send me an email or fill out our contact form for a consultation.</p>
-        </div>
-
-        <form id="contact-form" class="contact-form" aria-label="Contact form">
-          <label>
-            Name
-            <input name="name" type="text" required />
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" required />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-          <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
-        </form>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Custom Landscape Services</p>
-        <nav class="footer-nav">
-          <a href="#privacy">Privacy</a>
-          <a href="#terms">Terms</a>
-        </nav>
-      </div>
-    </footer>
-  </main>
-
-  <script src="app.js" defer></script>
+  <!-- === FOOTER === -->
+  <footer>
+    <p>© 2025 Custom Landscape Services | <a href="mailto:cydneyskeens@gmail.com">Email Us</a></p>
+  </footer>
 </body>
 </html>
+
