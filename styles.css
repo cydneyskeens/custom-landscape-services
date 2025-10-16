@@ -78,6 +78,17 @@ body{
 }
 .lead{color:var(--muted);margin-bottom:20px;font-size:18px}
 
+.hero-photo {
+  width: 100%;          /* make it fit the container */
+  max-width: 1000px;    /* limit how wide it can get on large screens */
+  height: auto;         /* keep the aspect ratio */
+  display: block;       /* removes the little space under images */
+  margin: 0 auto;       /* centers it */
+  border-radius: 8px;   /* optional: rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* optional: subtle shadow */
+}
+
+
 .photo-placeholder{
   height:360px;
   border-radius:16px;
