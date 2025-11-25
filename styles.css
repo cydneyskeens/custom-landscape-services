@@ -5,11 +5,13 @@
   box-sizing: border-box;
 }
 
-header .container a img {
-  max-height: 40px;     /* adjust as needed, e.g. 40px tall */
-  max-width: 120px;     /* adjust as needed, e.g. 120px wide */
-  height: auto;         /* maintain aspect ratio */
-  width: auto;          /* maintain aspect ratio */
+/* Force navbar logo to shrink */
+header a img {
+  max-height: 30px;
+  max-width: 80px;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
 }
 
 body {
