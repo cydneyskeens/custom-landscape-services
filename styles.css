@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+header .container a img {
+  max-height: 40px;     /* adjust as needed, e.g. 40px tall */
+  max-width: 120px;     /* adjust as needed, e.g. 120px wide */
+  height: auto;         /* maintain aspect ratio */
+  width: auto;          /* maintain aspect ratio */
+}
+
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #1a1a1a;
