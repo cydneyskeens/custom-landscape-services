@@ -7,8 +7,8 @@
 
 /* Force navbar logo to shrink */
 header a img {
-  max-height: 30px;
-  max-width: 80px;
+  max-height: 100px;
+  max-width: 100px;
   width: auto !important;
   height: auto !important;
   object-fit: contain;
