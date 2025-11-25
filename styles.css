@@ -8,126 +8,224 @@
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #1a1a1a;
-  background-color: #d9cdc2; /* soft muted beige/tan */
+  background-color: #f5f3f0; /* soft neutral background */
   line-height: 1.6;
   font-size: 16px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
 /* === Headings === */
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-weight: 700;
   letter-spacing: 0.5px;
-  color: #000;
-  text-transform: uppercase;
+  color: #222;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 1.6rem;
-  margin: 2rem 0 1rem;
-  border-bottom: 1px solid #000;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #222;
   display: inline-block;
   padding-bottom: 0.2rem;
 }
 
-/* === Layout === */
+/* === Sections === */
 section {
   padding: 80px 10%;
 }
 
 .hero {
-  background-color: #bcbec0; /* muted gray-blue */
+  background-color: #d9d2c3;
   color: #000;
   text-align: center;
   padding: 100px 5% 50px;
 }
 
 .hero h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: none;
-  margin-bottom: 40px;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
 }
 
-.hero img {
+.hero-image {
   width: 100%;
   max-width: 1000px;
   height: auto;
-  display: block;
   margin: 0 auto;
   border-radius: 6px;
+  display: block;
 }
 
-/* === Section: Fleet / Farm === */
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
+.hero-text {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
+/* === Section Content === */
 .section-content {
   max-width: 800px;
-  font-size: 0.95rem;
   margin-bottom: 40px;
+  font-size: 0.95rem;
 }
 
-.section-content ul {
-  margin: 10px 0 0 20px;
+.section-content ul li {
+  margin-bottom: 8px;
 }
 
-.section-content li {
-  margin-bottom: 5px;
-}
-
-/* === Buttons === */
-button, .btn {
-  background: #000;
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  padding: 10px 26px;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover, .btn:hover {
-  background: #333;
+.fleet-image,
+.farm-image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 20px auto 0;
 }
 
 /* === Gallery === */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive rows */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
   margin-top: 20px;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 250px;              /* sets uniform height */
-  object-fit: cover;          /* crops neatly without stretching */
-  border-radius: 8px;         /* smooth corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* subtle shadow */
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.03);      /* gentle zoom */
+  transform: scale(1.03);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* === Contact Form === */
+#contact {
+  background-color: #e6dfd5;
+  padding: 60px 10%;
+  border-radius: 8px;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+#contact-form textarea {
+  resize: vertical;
+}
+
+#contact-form button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 26px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: #555;
+}
+
+.form-feedback {
+  font-size: 0.9rem;
+  color: green;
+  margin-top: 5px;
 }
 
 /* === Footer === */
 footer {
   text-align: center;
-  padding: 40px 0;
+  padding: 40px 10%;
   font-size: 0.9rem;
   color: #444;
   background-color: #cfc4ba;
+}
+
+footer .social-links {
+  margin-top: 10px;
+}
+
+footer .social-links a {
+  margin: 0 10px;
+  font-weight: 600;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: #555;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 5%;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .gallery-grid img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .gallery-grid img {
+    height: 150px;
+  }
 }
