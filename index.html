@@ -6,14 +6,13 @@
   <title>Custom Landscape Services</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
   <!-- === HERO SECTION === -->
   <section class="hero">
     <h1>"I TOOK A WALK IN THE WOODS AND CAME OUT TALLER" – HENRY DAVID THOREAU</h1>
-    <img src="images/gallery/snowTH.jpeg" alt="Tiny Home in Snow" style="width:100%;border-radius:6px;">
-    <p style="max-width:700px;margin:20px auto 0;font-size:0.9rem;line-height:1.4;">
-      Landscaping firm specializing in reforestation, tree transplanting, and native grassland preservation. 
+    <img src="images/gallery/snow.png" alt="Tiny Home in Snow" class="hero-image">
+    <p class="hero-text">
+      Landscaping firm specializing in reforestation, tree transplanting, and native grassland preservation.
       Offering landscaping services and horticultural consultations.
     </p>
   </section>
@@ -22,17 +21,15 @@
   <section id="fleet">
     <h2 class="section-title">Our Fleet</h2>
     <div class="section-content">
-      <p>
-        Equipment to tackle landscaping, maintenance, and dirt work. Highlights of our fleet include:
-      </p>
+      <p>Equipment to tackle landscaping, maintenance, and dirt work. Highlights include:</p>
       <ul>
         <li>Big John tree spade truck capable of transplanting trees up to 8' diameter</li>
         <li>Tight access Vermeer tree spade</li>
-        <li>Implements to fulfill most landscape requirements from mowing to plowing and planting</li>
+        <li>Implements for mowing, plowing, planting, and landscaping</li>
         <li>Specialized horse track planer, road grader, and snow plow</li>
       </ul>
     </div>
-    <img src="images/gallery/tractor2.jpeg" alt="Our Fleet" style="width:100%;border-radius:6px;">
+    <img src="images/gallery/tractor2.jpeg" alt="Our Fleet" class="fleet-image">
   </section>
 
   <!-- === THE FARM SECTION === -->
@@ -40,13 +37,10 @@
     <h2 class="section-title">The Farm</h2>
     <div class="section-content">
       <p>
-        We operate a tree farm in Northeast Arkansas where we plant and nurture native seedlings. Trees include 
-        bald cypress, various species of pine, hardwood trees, nut trees like pecan and black walnut, and 
-        many types of oak. Ornamentals like dogwood, redbud and various evergreens and junipers. We also have a small fruit orchard with 
-        varieties of apple, plum, peach, and fig.
+        We operate a tree farm in Northeast Arkansas nurturing native seedlings including bald cypress, pine, hardwood, pecan, black walnut, oak, dogwood, redbud, evergreens, and junipers. A small fruit orchard grows apple, plum, peach, and fig varieties.
       </p>
     </div>
-    <img src="images/gallery/nursery.jpeg" alt="Tree Nursery" style="width:100%;border-radius:6px;">
+    <img src="images/gallery/nursery.jpeg" alt="Tree Nursery" class="farm-image">
   </section>
 
   <!-- === PROJECT GALLERY === -->
@@ -58,40 +52,95 @@
     </div>
   </section>
 
+  <!-- === CONTACT FORM SECTION === -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="https://formspree.io/f/movlrryk" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+      <p id="form-feedback" class="form-feedback"></p>
+    </form>
+  </section>
+
   <!-- === FOOTER === -->
-
   <footer>
-  <p>© 2025 Custom Landscape Services 
-    cydney skeens 
-    | <a href="mailto:cydneyskeens@gmail.com">Email Us</a>
-  </p>
+    <p>© <span id="year"></span> Custom Landscape Services | <a href="mailto:cydneyskeens@gmail.com">Email Us</a></p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61554428220637" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+  </footer>
 
-  <!-- Social Media Links -->
-  <div class="social-links">
-    <a href="https://www.facebook.com/profile.php?id=61554428220637" target="_blank" rel="noopener noreferrer">
-    </a>
-  </div>
-</footer>
-
-
-  <!-- === GALLERY SCRIPT === -->
+  <!-- === SCRIPTS === -->
   <script>
-    const galleryContainer = document.getElementById('gallery-grid');
-const baseURL = "https://cydneyskeens.github.io/custom-landscape-services/images/gallery/";
-    const imageList = [
-      "campsite.jpeg","campsite3.jpeg","campsite4.jpeg",
-      "campsiteUSA.jpeg","cydtractor.jpeg","equipment.jpeg","fencesunset.jpeg",
-      "fencetractor.jpeg","mulch.jpeg","nursery.jpeg","orchard.jpeg","solar.jpeg",
-      "snowTH.jpeg","tractor2.jpeg","treedamage.jpeg","treeplanting.jpeg",
-      "treerow.jpeg","treerow2.jpeg","treetransplant.jpeg","treetransplant1.jpeg",
-      "treetransplant2.jpeg","vermeer.jpeg"
-    ];
+    document.addEventListener('DOMContentLoaded', () => {
 
-    imageList.forEach(filename => {
-      const img = document.createElement("img");
-      img.src = baseURL + filename;
-      img.alt = filename;
-      galleryContainer.appendChild(img);
+      // --- Footer Year ---
+      const yearEl = document.getElementById('year');
+      if(yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // --- Gallery Images ---
+      const galleryContainer = document.getElementById('gallery-grid');
+      if(galleryContainer){
+        const baseURL = "images/gallery/";
+        const imageList = [
+          "campsite.jpeg","campsite3.jpeg","campsite4.jpeg","campsiteUSA.jpeg","cydtractor.jpeg",
+          "equipment.jpeg","fencesunset.jpeg","fencetractor.jpeg","mulch.jpeg","nursery.jpeg",
+          "orchard.jpeg","solar.jpeg","snow.png","tractor2.jpeg","treedamage.jpeg",
+          "treeplanting.jpeg","treerow.jpeg","treerow2.jpeg","treetransplant.jpeg",
+          "treetransplant1.jpeg","treetransplant2.jpeg","vermeer.jpeg"
+        ];
+
+        imageList.forEach(filename => {
+          const img = document.createElement("img");
+          img.src = baseURL + filename;
+          img.alt = filename.replace(/\.[^/.]+$/, "");
+          galleryContainer.appendChild(img);
+        });
+      }
+
+      // --- Contact Form Submission via Formspree ---
+      const form = document.getElementById('contact-form');
+      const feedback = document.getElementById('form-feedback');
+
+      if(form && feedback){
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          feedback.textContent = 'Sending…';
+          feedback.style.color = 'green';
+
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+
+            if(response.ok){
+              feedback.textContent = 'Thanks! Message sent successfully.';
+              form.reset();
+            } else {
+              feedback.textContent = 'Oops! Something went wrong. Please try again.';
+              feedback.style.color = 'red';
+            }
+          } catch (error) {
+            feedback.textContent = 'Oops! Something went wrong. Please try again.';
+            feedback.style.color = 'red';
+          }
+        });
+      }
+
     });
   </script>
 </body>
