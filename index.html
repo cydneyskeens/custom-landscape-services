@@ -9,27 +9,32 @@
 </head>
 
 <body>
-  <!-- Navbar -->
+
+  <!-- ================= NAVBAR ================= -->
   <header class="navbar">
     <div class="nav-container">
-      <!-- Logo -->
+
       <a href="/" class="nav-logo">
         <img src="images/gallery/logoo.png" alt="Custom Landscape Services Logo" class="logo-img">
-        <span class="logo-text">Landscape Design and Native Reforestation</span>
+        <span class="logo-text">Landscape Design & Native Reforestation</span>
       </a>
 
-      <!-- Contact Button -->
-      <a href="#contact" class="contact-btn">
-        Contact Us
-      </a>
+      <a href="#contact" class="contact-btn">Contact Us</a>
     </div>
   </header>
 
-  <!-- === HERO SECTION === -->
+
+  <!-- ================= HERO SECTION ================= -->
   <section class="hero">
     <div class="hero-content">
-      <h1 class="hero-quote">"I TOOK A WALK IN THE WOODS AND CAME OUT TALLER" – HENRY DAVID THOREAU</h1>
+
+      <h1 class="hero-quote">
+        "I TOOK A WALK IN THE WOODS AND CAME OUT TALLER"
+        <span class="quote-author">– HENRY DAVID THOREAU</span>
+      </h1>
+
       <img src="images/gallery/snow.png" alt="Tiny Home in Snow" class="hero-image">
+
       <p class="hero-text">
         Landscaping firm specializing in reforestation, tree transplanting, and native grassland preservation.
         Offering landscaping services and horticultural consultations.
@@ -37,144 +42,109 @@
     </div>
   </section>
 
-  <!-- === OUR FLEET SECTION === -->
+
+  <!-- ================= OUR FLEET ================= -->
   <section id="fleet" class="content-section">
     <div class="section-container">
+
       <h2 class="section-title">Our Fleet</h2>
+
       <div class="section-content">
         <p>Equipment to tackle landscaping, maintenance, and dirt work. Highlights include:</p>
         <ul class="feature-list">
-          <li>Big John tree spade truck capable of transplanting trees up to 8' diameter</li>
-          <li>Tight access Vermeer tree spade</li>
-          <li>Implements for mowing, plowing, planting, and landscaping</li>
-          <li>Specialized horse track planer, road grader, and snow plow</li>
+          <li>Big John tree spade (transplants up to 8' diameter)</li>
+          <li>Compact Vermeer tree spade for tight-access work</li>
+          <li>Mowing, plowing, planting & landscaping implements</li>
+          <li>Horse track planer, road grader, and snow plow attachments</li>
         </ul>
       </div>
+
       <img src="images/gallery/tractor2.jpeg" alt="Our Fleet" class="section-image">
     </div>
   </section>
 
-  <!-- === THE FARM SECTION === -->
+
+  <!-- ================= THE FARM ================= -->
   <section id="farm" class="content-section alt-section">
     <div class="section-container">
+
       <h2 class="section-title">The Farm</h2>
-      <div class="section-content">
-        <p>
-          We operate a tree farm in Northeast Arkansas nurturing native seedlings including bald cypress, pine, hardwood, pecan, black walnut, oak, dogwood, redbud, evergreens, and junipers. A small fruit orchard grows apple, plum, peach, and fig varieties.
-        </p>
-      </div>
+      <p class="section-text">
+        We operate a tree farm in Northeast Arkansas nurturing native seedlings including bald cypress, pine, hardwood, pecan,
+        black walnut, oak, dogwood, redbud, evergreens, and junipers. A small fruit orchard grows apple, plum, peach,
+        and fig varieties.
+      </p>
+
       <img src="images/gallery/nursery.jpeg" alt="Tree Nursery" class="section-image">
     </div>
   </section>
 
-  <!-- === PROJECT GALLERY === -->
+
+  <!-- ================= GALLERY ================= -->
   <section id="gallery" class="content-section">
     <div class="section-container">
       <h2 class="section-title">Gallery</h2>
-      <p class="section-subtitle">Recent projects</p>
+      <p class="section-subtitle">Recent Projects</p>
+
       <div class="gallery-grid" id="gallery-grid"></div>
     </div>
   </section>
 
-  <!-- === CONTACT FORM SECTION === -->
+
+  <!-- ================= CONTACT FORM ================= -->
   <section id="contact" class="content-section alt-section">
     <div class="section-container">
+
       <h2 class="section-title">Contact Us</h2>
+
       <form id="contact-form" class="contact-form" action="https://formspree.io/f/movlrryk" method="POST">
+
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+          <label>Name</label>
+          <input type="text" name="name" required>
         </div>
-        
+
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+          <label>Email</label>
+          <input type="email" name="email" required>
         </div>
-        
+
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <label>Message</label>
+          <textarea name="message" rows="5" required></textarea>
         </div>
 
         <button type="submit" class="submit-btn">Send Message</button>
         <p id="form-feedback" class="form-feedback"></p>
+
       </form>
     </div>
   </section>
 
-  <!-- === FOOTER === -->
+
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="footer-content">
-      <p>&copy; <span id="year"></span> Custom Landscape Services | <a href="mailto:cydneyskeens@gmail.com">Email Us</a></p>
+      <p>&copy; <span id="year"></span> Custom Landscape Services |
+        <a href="mailto:cydneyskeens@gmail.com">Email Us</a>
+      </p>
+
       <div class="social-links">
-        <a href="https://www.facebook.com/profile.php?id=61554428220637" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.facebook.com/profile.php?id=61554428220637" target="_blank">Facebook</a>
       </div>
     </div>
   </footer>
 
+
+  <!-- ================= JS ================= -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // --- Footer Year ---
+
       const yearEl = document.getElementById('year');
-      if(yearEl) yearEl.textContent = new Date().getFullYear();
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-      // --- Gallery Images ---
-      const galleryContainer = document.getElementById('gallery-grid');
-      if(galleryContainer){
-        const baseURL = "images/gallery/";
-        const imageList = [
-          "campsite.jpeg","campsite3.jpeg","campsite4.jpeg","campsiteUSA.jpeg","cydtractor.jpeg",
-          "equipment.jpeg","fencesunset.jpeg","fencetractor.jpeg","mulch.jpeg","nursery.jpeg",
-          "orchard.jpeg","solar.jpeg","snow.png","tractor2.jpeg","treedamage.jpeg",
-          "treeplanting.jpeg","treerow.jpeg","treerow2.jpeg","treetransplant.jpeg",
-          "treetransplant1.jpeg","treetransplant2.jpeg","vermeer.jpeg"
-        ];
-
-        imageList.forEach(filename => {
-          const img = document.createElement("img");
-          img.src = baseURL + filename;
-          img.alt = "Landscape project: " + filename.replace(/\.[^/.]+$/, "").replace(/([A-Z])/g, ' $1').trim();
-          img.loading = "lazy";
-          galleryContainer.appendChild(img);
-        });
-      }
-
-      // --- Contact Form Submission via Formspree ---
-      const form = document.getElementById('contact-form');
-      const feedback = document.getElementById('form-feedback');
-
-      if(form && feedback){
-        form.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          feedback.textContent = 'Sending…';
-          feedback.className = 'form-feedback sending';
-
-          const formData = new FormData(form);
-
-          try {
-            const response = await fetch(form.action, {
-              method: form.method,
-              body: formData,
-              headers: {
-                'Accept': 'application/json'
-              }
-            });
-
-            if(response.ok){
-              feedback.textContent = 'Thanks! Message sent successfully.';
-              feedback.className = 'form-feedback success';
-              form.reset();
-            } else {
-              feedback.textContent = 'Oops! Something went wrong. Please try again.';
-              feedback.className = 'form-feedback error';
-            }
-          } catch (error) {
-            feedback.textContent = 'Oops! Something went wrong. Please try again.';
-            feedback.className = 'form-feedback error';
-          }
-        });
-      }
-    });
-  </script>
-</body>
-</html>
+      const gallery = document.getElementById('gallery-grid');
+      const baseURL = "images/gallery/";
+      const images = [
+        "campsite.jpeg","campsite3.jpeg","campsite4.jpeg","campsiteUSA.jpeg","cydtractor.jpeg",
+        "equipment.
