@@ -5,65 +5,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Landscape Services</title>
+
+  <!-- LocalBusiness Schema -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Custom Landscape Services",
-  "telephone": "+1-214-763-0146",
-  "email": "cydneyskeens@gmail.com",
-  "url": "https://cls23.com",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "N/A (service-based)",
-    "addressLocality": "Northeast Arkansas",
-    "addressRegion": "AR",
-    "addressCountry": "US"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "35.6000",
-    "longitude": "-90.6000"
-  },
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": ["Arkansas", "Missouri", "Tennessee"]
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-    "opens": "08:00",
-    "closes": "18:00"
-  },
-  "description": "Custom Landscape Services specializing in reforestation, native plants, tree transplanting, orchard development, and land management. Serving Arkansas and surrounding regions.",
-  "sameAs": [
-    "https://share.google/E0UA4cFSOnif1qdp9",
-    "https://www.facebook.com/profile.php?id=61554428220637"
-  ]
-}
-</script>
-   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Landscaping, Tree Transplanting, Reforestation",
-  "areaServed": [
-    {"@type": "City", "name": "Jonesboro, AR"},
-    {"@type": "City", "name": "Paragould, AR"},
-    {"@type": "City", "name": "Blytheville, AR"},
-    {"@type": "City", "name": "Poplar Bluff, MO"},
-    {"@type": "City", "name": "West Memphis, AR"}
-  ],
-  "provider": {
+  {
+    "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Custom Landscape Services"
+    "name": "Custom Landscape Services",
+    "image": "https://cls23.com/images/gallery/logoo.png",
+    "telephone": "+1-214-763-0146",
+    "email": "cydneyskeens@gmail.com",
+    "url": "https://cls23.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "N/A (service-based)",
+      "addressLocality": "Northeast Arkansas",
+      "addressRegion": "AR",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "35.6000",
+      "longitude": "-90.6000"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": ["Arkansas", "Missouri", "Tennessee"]
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "description": "Custom Landscape Services specializing in reforestation, native plants, tree transplanting, orchard development, and land management. Serving Arkansas and surrounding regions.",
+    "sameAs": [
+      "https://share.google/E0UA4cFSOnif1qdp9",
+      "https://www.facebook.com/profile.php?id=61554428220637"
+    ]
   }
-}
-</script>
+  </script>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Landscaping, Tree Transplanting, Reforestation",
+    "areaServed": [
+      {"@type": "City", "name": "Jonesboro, AR"},
+      {"@type": "City", "name": "Paragould, AR"},
+      {"@type": "City", "name": "Blytheville, AR"},
+      {"@type": "City", "name": "Poplar Bluff, MO"},
+      {"@type": "City", "name": "West Memphis, AR"}
+    ],
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Custom Landscape Services"
+    }
+  }
+  </script>
 
   <link rel="stylesheet" href="styles.css">
 </head>
+
 
 <body>
 
@@ -195,29 +201,45 @@
         <a href="mailto:cydneyskeens@gmail.com">Email Us</a>
       </p>
 
-      <div class="social-links">
-        <a href="https://www.facebook.com/profile.php?id=61554428220637" target="_blank">Facebook</a>
-        <a href="https://share.google/E0UA4cFSOnif1qdp9" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   class="google-review-btn">
-  ★ Review Us on Google
-</a>
+     <div class="social-links">
+  <a href="https://www.facebook.com/profile.php?id=61554428220637" target="_blank">Facebook</a>
 
-      </div>
+  <a href="https://share.google/E0UA4cFSOnif1qdp9"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="google-review-btn">
+     ★ Review Us on Google
+  </a>
+</div>
+
     </div>
   </footer>
 
 
   <!-- ================= JS ================= -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
-      const yearEl = document.getElementById('year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-      const gallery = document.getElementById('gallery-grid');
-      const baseURL = "images/gallery/";
-      const images = [
-        "campsite.jpeg","campsite3.jpeg","campsite4.jpeg","campsiteUSA.jpeg","cydtractor.jpeg",
-        "equipment.
+  const gallery = document.getElementById('gallery-grid');
+  const baseURL = "images/gallery/";
+  const images = [
+    "campsite.jpeg","campsite3.jpeg","campsite4.jpeg","campsiteUSA.jpeg","cydtractor.jpeg",
+    "equipment.jpeg","fencesunset.jpeg","fencetractor.jpeg","mulch.jpeg","nursery.jpeg",
+    "orchard.jpeg","solar.jpeg","snow.png","tractor2.jpeg","treedamage.jpeg",
+    "treeplanting.jpeg","treerow.jpeg","treerow2.jpeg","treetransplant.jpeg",
+    "treetransplant1.jpeg","treetransplant2.jpeg","vermeer.jpeg"
+  ];
+
+  images.forEach(file => {
+    const img = document.createElement("img");
+    img.src = baseURL + file;
+    img.loading = "lazy";
+    gallery.appendChild(img);
+  });
+
+});
+</script>
+
