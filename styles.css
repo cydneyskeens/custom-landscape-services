@@ -88,38 +88,41 @@ body::before {
 /* ================= HERO SECTION ================= */
 
 .hero {
-  padding: 135px 20px 70px;
+  padding: 150px 20px 60px;
   text-align: center;
 }
 
-.hero-quote {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  color: #5c4632; /* Earth brown */
-  max-width: 780px;
-  margin: auto;
-  font-weight: 500;
+/* Move intro text above the image */
+.hero-intro {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-size: 1.15rem;
+  color: #4b4b4b;
 }
 
-.quote-author {
-  font-size: 1.05rem;
-  opacity: 0.7;
-  margin-top: 8px;
-  display: block;
-}
-
+/* Hero image tweaks */
 .hero-image {
-  margin: 40px auto 25px;
-  max-width: 750px;
+  margin: 10px auto 30px;
+  max-width: 680px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.hero-text {
+/* Quote smaller + lower emphasis */
+.hero-quote {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  color: #5c4632;
   max-width: 700px;
-  margin: auto;
-  font-size: 1.15rem;
-  color: #4b4b4b;
+  margin: 20px auto 0;
+  opacity: 0.85;
+}
+
+.hero-quote .quote-author {
+  font-size: 1rem;
+  opacity: 0.6;
+  margin-top: 6px;
+  display: block;
 }
 
 
@@ -171,19 +174,20 @@ body::before {
 /* ================= GALLERY ================= */
 
 .gallery-grid {
+  margin-top: 40px;
   display: grid;
-  gap: 12px;
-  margin-top: 35px;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 }
 
 .gallery-grid img {
-  height: 190px;
+  width: 100%;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
-  filter: sepia(10%) contrast(95%);
-  transition: 0.2s;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
 }
+
 
 .gallery-grid img:hover {
   transform: scale(1.02);
@@ -267,19 +271,31 @@ input, textarea {
 
 /* ================= MOBILE RESPONSIVE ================= */
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
 
-  .logo-text {
-    display: none;
+  /* Gallery smaller on mobile */
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
   }
 
+  .gallery-grid img {
+    height: 120px;
+  }
+
+  /* Hero image smaller on mobile */
+  .hero-image {
+    max-width: 90%;
+    margin: 5px auto 25px;
+  }
+
+  /* Quote less prominent on mobile */
   .hero-quote {
-    font-size: 1.65rem;
+    font-size: 1.35rem;
+    margin-top: 10px;
   }
+}
 
-  .section-title {
-    font-size: 1.9rem;
-  }
 
   .gallery-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
