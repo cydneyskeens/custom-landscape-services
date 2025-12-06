@@ -153,6 +153,15 @@ img {
   height: 170px;
 }
 
+.local-seo {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+
 /* ================= CONTACT FORM ================= */
 .contact-form {
   max-width: 550px;
