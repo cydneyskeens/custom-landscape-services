@@ -210,6 +210,21 @@ input, textarea {
 .footer a {
   color: #cce2cc;
 }
+.google-review-btn {
+  display: inline-block;
+  background: #4285F4;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.google-review-btn:hover {
+  background: #3367d6;
+}
+
 
 /* ================= MOBILE OPTIMIZATION ================= */
 @media (max-width: 700px) {
