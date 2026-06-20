@@ -1,4 +1,4 @@
-// === Basic Interactions: Year, Mobile Menu, Contact Form ===
+// === Basic Interactions: Year, Mobile Menu, Gallery, Contact Form ===
 document.addEventListener('DOMContentLoaded', () => {
 
   // --- Footer Year ---
@@ -12,13 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.nav');
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
-      const expanded = nav.style.display === 'block';
-      nav.style.display = expanded ? 'none' : 'block';
-      toggle.textContent = expanded ? '☰' : '✕';
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.textContent = isOpen ? '✕' : '☰';
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Close menu when a link is tapped (mobile)
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.textContent = '☰';
+        toggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
-  // --- Gallery Images (if dynamic) ---
+  // --- Gallery Images (dynamic) ---
   const galleryContainer = document.getElementById('gallery-grid');
   if (galleryContainer) {
     const baseURL = "images/gallery/";
@@ -34,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const img = document.createElement("img");
       img.src = baseURL + filename;
       img.alt = filename.replace(/\.[^/.]+$/, ""); // clean alt text
-      img.classList.add("gallery-item"); // optional: for CSS styling
+      img.loading = "lazy"; // defer offscreen images for faster load
+      img.classList.add("gallery-item");
       galleryContainer.appendChild(img);
     });
   }
@@ -58,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }).then(response => {
         if (response.ok) {
           feedback.textContent = 'Thanks! Message sent successfully.';
+          feedback.style.color = 'green';
           form.reset();
         } else {
           feedback.textContent = 'Oops! Something went wrong. Please try again.';
