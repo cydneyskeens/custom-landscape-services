@@ -39,13 +39,35 @@ document.addEventListener('DOMContentLoaded', () => {
       "treetransplant1.jpeg","treetransplant2.jpeg","vermeer.jpeg"
     ];
 
+    // Filenames that come out of the camera/CMS rotated incorrectly.
+    // These get a CSS correction (transform: rotate(90deg)) applied via
+    // the "rotate-fix" class below.
+    const rotateFixList = [
+      "equipment.jpeg",
+      "treedamage.jpeg",
+      "treeplanting.jpeg",
+      "treerow.jpeg",
+      "treerow2.jpeg",
+      "treetransplant2.jpeg",
+      "vermeer.jpeg"
+    ];
+
     imageList.forEach(filename => {
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("gallery-item-wrap");
+
       const img = document.createElement("img");
       img.src = baseURL + filename;
       img.alt = filename.replace(/\.[^/.]+$/, ""); // clean alt text
       img.loading = "lazy"; // defer offscreen images for faster load
       img.classList.add("gallery-item");
-      galleryContainer.appendChild(img);
+
+      if (rotateFixList.includes(filename)) {
+        img.classList.add("rotate-fix");
+      }
+
+      wrapper.appendChild(img);
+      galleryContainer.appendChild(wrapper);
     });
   }
 
