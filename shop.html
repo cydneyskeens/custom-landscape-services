@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steel Storm Shelter | Shop | Custom Landscape Services</title>
+  <meta name="description" content="Buy a steel storm shelter from Custom Landscape Services. Pickup available in Hardy, Arkansas; delivery can be arranged for an additional fee.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/gallery/logo-favicon.png">
+  <link rel="shortcut icon" type="image/png" href="images/gallery/logo-favicon.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+
+      <a href="/" class="nav-logo">
+        <img src="images/gallery/logo.png" alt="Custom Landscape Services Logo" class="logo-img">
+        <span class="logo-text">Landscape Design &amp; Native Reforestation</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html#fleet">Our Fleet</a>
+        <a href="index.html#farm">The Farm</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="campsites.html">Campsites</a>
+        <a href="shop.html" class="nav-active">Shop</a>
+        <a href="index.html#contact" class="contact-btn">Contact Us</a>
+      </nav>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+
+  <!-- ================= SHOP HERO ================= -->
+  <section class="hero shop-hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Shop</p>
+      <h1 class="campsite-hero-title">Steel Storm Shelter</h1>
+      <p class="hero-text hero-intro">
+        A steel storm shelter available directly from Custom Landscape Services.
+        Purchase securely online, then pick up in Hardy, Arkansas &mdash; or contact us to arrange delivery.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ================= PHOTOS ================= -->
+  <section id="shelter-photos" class="content-section">
+    <div class="section-container">
+      <h2 class="section-title">Photos</h2>
+      <div class="gallery-grid shelter-grid" id="shelter-grid"></div>
+    </div>
+  </section>
+
+
+  <!-- ================= PURCHASE ================= -->
+  <section id="purchase" class="content-section alt-section">
+    <div class="section-container">
+
+      <h2 class="section-title">Buy Now</h2>
+      <p class="section-subtitle">Secure checkout powered by Stripe.</p>
+
+      <div class="purchase-card">
+
+        <!--
+          STRIPE LINK: replace the href below with Cydney's Stripe "Buy Now"
+          payment link (it starts with https://buy.stripe.com/).
+          Until a real Stripe link is pasted here, the button automatically
+          becomes "Contact Us to Purchase" so customers never hit a dead link.
+        -->
+        <a id="buy-now-btn" class="hero-cta buy-btn" href="REPLACE_WITH_STRIPE_BUY_NOW_LINK">Buy Now</a>
+
+        <div class="purchase-info">
+          <div class="info-block">
+            <h3>Pickup</h3>
+            <p>Pickup is available in <strong>Hardy, Arkansas</strong>.</p>
+          </div>
+
+          <div class="info-block">
+            <h3>Delivery</h3>
+            <p>Delivery can be arranged for an <strong>additional fee</strong>. Please contact us for details before ordering.</p>
+          </div>
+        </div>
+
+        <div class="purchase-contact">
+          <p>Questions about the shelter or delivery?</p>
+          <div class="campsite-hero-ctas">
+            <a href="index.html#contact" class="hero-cta">Send a Message</a>
+            <a href="tel:+12147630146" class="hero-cta hero-cta-outline">Call (214) 763-0146</a>
+          </div>
+          <p class="purchase-email"><a href="mailto:cydneyskeens@gmail.com">cydneyskeens@gmail.com</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        <img src="images/gallery/logo.png" alt="Custom Landscape Services Logo" class="footer-logo">
+        <p class="footer-tagline">Landscape Design &amp; Native Reforestation</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html#fleet">Our Fleet</a>
+        <a href="index.html#farm">The Farm</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="campsites.html">Campsites</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#contact">Contact Us</a>
+      </div>
+
+      <div class="footer-contact">
+        <a href="mailto:cydneyskeens@gmail.com" class="footer-contact-link">cydneyskeens@gmail.com</a>
+        <a href="tel:+12147630146" class="footer-contact-link">(214) 763-0146</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61554428220637" target="_blank" rel="noopener noreferrer" class="social-btn">Facebook</a>
+        <a href="https://share.google/E0UA4cFSOnif1qdp9" target="_blank" rel="noopener noreferrer" class="social-btn google-review-btn">★ Review Us on Google</a>
+      </div>
+
+      <p class="footer-copy">&copy; <span id="year"></span> Custom Landscape Services. All rights reserved.</p>
+
+    </div>
+  </footer>
+
+
+  <!-- ================= JS ================= -->
+  <script src="apps.js" defer></script>
+</body>
+</html>

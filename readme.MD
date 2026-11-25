@@ -1,20 +1,15 @@
-# Static Website
+# Custom Landscape Services (cls23.com)
 
-## How to use
+Static site (HTML/CSS/JS, no build step). Hosted on GitHub Pages (`CNAME` = www.cls23.com).
 
-1. Create a new GitHub repository (public or private).
-2. Add the files from this repo: `index.html`, `styles.css`, `app.js`, `README.md`.
-3. Commit & push.
-4. (Optional) Publish via GitHub Pages:
-   - In the GitHub repo, go to Settings → Pages → Source: `main` branch, `/ (root)` and Save.
-   - After a minute, your site will be available at `https://<username>.github.io/<repo>`.
+Pages: `index.html`, `campsites.html`, `shop.html`
 
-## Customization
+## To finish the Shop page
+1. **Stripe link:** open `shop.html`, find `id="buy-now-btn"`, and replace
+   `REPLACE_WITH_STRIPE_BUY_NOW_LINK` with the real link (starts with `https://buy.stripe.com/`).
+   Until then the button safely shows "Contact Us to Purchase".
+2. **Shelter photos:** put them in `images/shelter/`, then list them in `apps.js`
+   inside `shelterPhotos` (examples are commented out). Use ~1400px wide JPGs.
 
-- Replace the placeholder hero photo (`.photo-placeholder`) with your own image by replacing the element, or update hero CSS to use a background-image.
-- Replace gallery images (the current code uses `picsum.photos` placeholders) with your own images in the `<figure>` blocks.
-- To receive real contact form submissions, wire the form to a service like Netlify Forms, Formspree, or your own server.
-
-## Notes
-
-- This is intentionally simple and dependency-free (no build system). If you want a React or Tailwind version, tell me and I’ll produce one.
+## Images
+Keep photos at about 1400px wide, JPEG quality ~80, and correctly rotated before uploading.
